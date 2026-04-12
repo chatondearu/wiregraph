@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:app": "bash scripts/dev.sh",
     "build": "vue-tsc --noEmit && vite build",
+    "build:app": "bash scripts/build.sh",
     "preview": "vite preview"
   },
   "dependencies": {
