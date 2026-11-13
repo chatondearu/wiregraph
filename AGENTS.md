@@ -4,6 +4,8 @@ Guidance for agentic tools when this directory is the workspace root.
 
 ## Nix (this repo)
 
+**Mise** (`mise.toml` + `mise.lock`) pins Node **22.22.2** and Rust **1.91.1** to match the flake's `nodejs` / `rustc` on nixos-25.11. Prefer `mise install`, then `mise exec -- <command>` (or activate Mise) for language tools; avoid wrapping every command in `nix develop`. Keep the flake for the full shell (GTK/WebKitGTK, `cargo-tauri`, GStreamer, PipeWire helpers) and `nix build .#wiregraph`.
+
 This project ships a **standalone flake** at the repo root (`flake.nix` + `flake.lock`).
 
 - **Dev environment**: `nix develop` — Rust, Node.js, `cargo-tauri`, GTK/WebKitGTK, OpenSSL (`OPENSSL_NO_VENDOR`), GStreamer plugin path (same idea as the release wrapper), `pipewire` + `alsa-utils` on `PATH`.
