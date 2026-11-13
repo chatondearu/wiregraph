@@ -7,3 +7,7 @@ rust = "1.91.1"
 
 [settings]
 all_compile = false
+
+[env]
+# Load dotenv if present (replaces direnv dotenv_if_exists).
+_.file = [".env", ".env.local"]
