@@ -1,0 +1,9 @@
+# Pins align with flake.nix (pkgs.nodejs → nodejs_22 22.22.2, rustc → 1.91.1 on nixos-25.11).
+# Prefer `mise install` + `mise exec -- <cmd>` for language tools; keep flake for Tauri/GTK/WebKit.
+
+[tools]
+node = "22.22.2"
+rust = "1.91.1"
+
+[settings]
+all_compile = false
